@@ -14,6 +14,18 @@
                     @if ($hero->btn_text)
                     <a href="{{$hero->btn_url}}" class="button-dark mouse-dir wow fadeInUp" data-wow-delay="0.5s">{{$hero->btn_text}} <span
                             class="dir-part"></span></a>
+                            
+                            <a href="#" class="button-dark mouse-dir wow fadeInUp" data-wow-delay="0.5s" style="background-color: black;" >Profile Kami <span
+                                class="dir-part"></span></a>
+
+                            <style>.button-dark {
+                                margin-right: 20px; /* Adjust the value for spacing */
+                            }
+
+                            .button-profile {
+                                background-color: black;
+                            }
+                            </style>
                     @endif
                    
                 </div>
@@ -42,7 +54,7 @@
             <div class="col-lg-8">
                 <div class="header-text">
                     <h3 class="typer-title wow fadeInUp" data-wow-delay="0.2s">Kursus & Pelatihan IT Multimedia</h3>
-                    <h1 class="title wow fadeInUp" data-wow-delay="0.3s" style="color: #F26124;">CreativeMedia</h1>
+                    <h1 class="title wow fadeInUp" data-wow-delay="0.3s" style="color: #F26124;">{{$hero->title}}</h1>
                     <div class="desc wow fadeInUp" data-wow-delay="0.4s">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque at, aperiam corrupti
                             earum quasi, porro voluptatem commodi eos laboriosam nam quis nostrum, molestiae
