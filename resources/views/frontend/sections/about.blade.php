@@ -21,9 +21,9 @@ padding-top: 10px;
                     <div class="desc wow fadeInUp" data-wow-delay="0.4s">
                         <p>Creative Media merupakan perusahaan Digital Agency & IT Consultant  di Surabaya. Kami berfokus pada Computer Course & Training, Branding  & Design, Web Development & Mobile Apps Development. Kami  mempunyai 15 bidang studi unggulan yaitu: Komputer Umum & Internet,  Desain Grafis, Animasi, Digital Marketing, Desain Interior, Desain  Arsiterktur, Administrasi Perkantoran, Komputer Akuntansi, Editing Video  Multimedia, Website Design CMS, Web Designer, Programming Web,  Programming Java Android, Photography. Selain Kursus dan  Pelatihan IT Multimedia kami menyediakan Devisi Development yang  berfokus pada Development Website, Sistem Aplikasi Perusahaan, Aplikasi  Android & iOS, dll. Bagi Anda yang ingin konsultasi terkait  kebutuhan IT dan Digitalisasi sistem di Perusahaan bisa menghubungi Tim  kami untuk mendapatkan Solusi Terbaik.</p>
                     </div>
-                    <a href="#" class="button-primary-trans mouse-dir wow fadeInUp button-about" data-wow-delay="0.5s">
-                        <span class="icon"><i class="fal fa-download"></i></span>
-                        <span class="text">Download Resume</span>
+                    <a href="https://wa.me/+6281353401336" class="button-primary-trans mouse-dir wow fadeInUp button-about" data-wow-delay="0.5s">
+                        <span class="icon"><i class="fab fa-whatsapp"></i></span>
+                        <span class="text">Hubungi Kami</span>
                         <span class="dir-part"></span>
                     </a>
                 </div>

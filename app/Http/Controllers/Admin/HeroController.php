@@ -58,7 +58,6 @@ class HeroController extends Controller
     {
         $request->validate([
             'title' => ['required', 'max:200'],
-            'sub_title' => [],
             'image' => ['max:3000', 'image'],
         ]);
 
