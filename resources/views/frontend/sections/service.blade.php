@@ -61,12 +61,15 @@ h2 {
     <div class="container">
         <div class="row">
 
+          @foreach ($services as $service)
           <div class="col-lg-3">  <div class="single-service">
             <div class="image-container">  <img src="{{asset('assets/img/course-training.jpg')}}" alt="Service Image">
             </div>
-              <h3 class="title wow fadeInRight" data-wow-delay="0.3s">Course & Training</h3>
+              {{-- <h3 class="title wow fadeInRight" data-wow-delay="0.3s">Course & Training</h3> --}}
+              <h3 class="title wow fadeInRight" data-wow-delay="0.3s">{{$service->name}}</h3>
               <div class="desc wow fadeInRight" data-wow-delay="0.4s">
-                <p>Kursus & Pelatihan Komputer IT Multimedia dengan biaya terjangkau  serta bersaing meliputi bidang studi Digital Marketing, Animasi,  Photography, Graphic Design, Interior Design, Arsitektur Design, Web  Designer, Programming Web, Akuntansi, Video Editor, dll</p>
+                {{-- <p>Kursus & Pelatihan Komputer IT Multimedia dengan biaya terjangkau  serta bersaing meliputi bidang studi Digital Marketing, Animasi,  Photography, Graphic Design, Interior Design, Arsitektur Design, Web  Designer, Programming Web, Akuntansi, Video Editor, dll</p> --}}
+                <p>{{$service->description}}</p>
               </div>
             </div>
           </div>
@@ -97,6 +100,9 @@ h2 {
               <h3 class="title wow fadeInRight" data-wow-delay="0.3s">Mobile Development</h3>  <div class="desc wow fadeInRight" data-wow-delay="0.4s">
                 <p>Konsultasikan dengan kami kebutuhan aplikasi mobile Anda, adanya  aplikasi berbasis mobile (Android dan iOS) yang Anda miliki mampu  menjangkau customer secara luas serta informasi dapat diakses tanpa  batas oleh pelanggan karena mudah diakses kapan saja oleh pelanggan  setia Anda.</p>
               </div>
+          @endforeach
+
+          
             </div>
           </div>
 
