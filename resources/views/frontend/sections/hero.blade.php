@@ -35,48 +35,15 @@
     </div>
 </header>
 
-{{-- @push('scripts')
+@push('scripts')
     <script>
-        @php
+         @php
             $titles = [];
             foreach($typerTitles as $title){
                 $titles[] = $title->title;
             }
             $titles = json_encode($titles);
         @endphp
-        $('.header-area .typer-title').typer({!! $titles !!});
+            $(".header-area .typer-title").typer({!! $titles !!});
     </script>
-@endpush --}}
-
-{{-- <header class="header-area parallax-bg" id="home-page" style= "background: url('{{asset($hero->image)}}') no-repeat scroll top center/cove">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8">
-                <div class="header-text">
-                    <h3 class="typer-title wow fadeInUp" data-wow-delay="0.2s">Kursus & Pelatihan IT Multimedia</h3>
-                    <h1 class="title wow fadeInUp" data-wow-delay="0.3s" style="color: #F26124;">{{$hero->title}}</h1>
-                    <div class="desc wow fadeInUp" data-wow-delay="0.4s">
-                        <p>{{$hero->sub_title}}</p>
-                    </div>
-
-                    @if ($hero->btn_text)
-                    <a href="{{$hero->btn_url}}" class="button-dark mouse-dir wow fadeInUp" data-wow-delay="0.5s">{{$hero->btn_text}}<span
-                        class="dir-part"></span></a>
-                    @endif
-                   
-                    <a href="#" class="button-dark mouse-dir wow fadeInUp" data-wow-delay="0.5s" style="background-color: black;" >Profile Kami <span
-                            class="dir-part"></span></a>
-
-                            <style>.button-dark {
-                                margin-right: 20px; /* Adjust the value for spacing */
-                            }
-
-                            .button-profile {
-                                background-color: black;
-                            }
-                            </style>
-                </div>
-            </div>
-        </div>
-    </div>
-</header> --}}
+@endpush
