@@ -65,6 +65,7 @@
             {{-- <li><a class="nav-link" href="{{route('hero.index')}}">Hero Section</a></li> --}}
             <li><a class="nav-link" href="{{route('admin.category.index')}}">Category</a></li>
             <li><a class="nav-link" href="{{route('admin.portfolio-item.index')}}">Portfolio Items</a></li>
+            <li><a class="nav-link" href="{{route('admin.portfolio-section-setting.index')}}">Section Settings</a></li>
           </ul>
         </li>
       </ul>

@@ -9,8 +9,8 @@ use Illuminate\Support\Facades\File;
 function handleUpload($inputName, $model=null){
     try{
         if(request()->hasFile($inputName)){
-            if($model && \File::exists(public_path($model->{$inputName}))) {
-                \File::delete(public_path($model->{$inputName}));
+            if($model && File::exists(public_path($model->{$inputName}))) {
+                File::delete(public_path($model->{$inputName}));
             }
 
             $file = request()->file($inputName);
@@ -32,8 +32,8 @@ function handleUpload($inputName, $model=null){
 
 function deleteFileIfExist($filePath){
     try{
-        if(\File::exists(public_path($filePath))){
-            \File::delete(public_path($filePath));
+        if(File::exists(public_path($filePath))){
+            File::delete(public_path($filePath));
         }
     }catch(\Exception $e){
         throw $e;
