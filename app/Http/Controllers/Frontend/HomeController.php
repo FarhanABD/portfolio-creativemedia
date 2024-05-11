@@ -34,4 +34,9 @@ class HomeController extends Controller
             'portfolioItems',
         ));
     }
+
+    public function showPortfolio($id){
+        $portfolio = PortfolioItem::findOrFail($id);
+        return view('frontend.portfolio-details', compact('portfolio'));
+    }
 }

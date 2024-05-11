@@ -14,6 +14,7 @@ use App\Http\Controllers\Frontend\HomeController;
 
 use Illuminate\Support\Facades\Route;
 
+//------------ FRONTEND ROUTES ----------------------------------------//
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/blog', function () {
     return view('frontend.blog');
@@ -21,9 +22,10 @@ Route::get('/blog', function () {
 Route::get('/blog-details', function () {
     return view('frontend.blog-details');
 });
-Route::get('/portfolio-details', function () {
-    return view('frontend.portfolio-details');
-});
+
+Route::get('portfolio-details/{id}', [HomeController::class, 'showPortfolio'])->name('show.portfolio');
+//===================== ENDS OF FRONTEND ROUTES ===========================//
+
 
 Route::get('dashboard',[DashboardController::class, 'index'])->middleware('auth', 'verified')->name('dashboard');
 
@@ -50,7 +52,7 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], 
     //------ Portfolio Item Route -------//
     Route::resource('portfolio-item',PortfolioItemController::class);
 
-    //------ POrtfolio Section Setting route ------//
+    //------ Portfolio Section Setting route ------//
     Route::resource('portfolio-section-setting',PortfolioSectionSettingController::class);
 });
 

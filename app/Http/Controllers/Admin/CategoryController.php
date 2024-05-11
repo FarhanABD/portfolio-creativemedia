@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\DataTables\CategoryDataTable;
-use App\Http\Controllers\Controller;
+use App\Models\Category;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
-use App\Models\Category;
+use App\Models\PortfolioItem;
+use App\Http\Controllers\Controller;
+use App\DataTables\CategoryDataTable;
 
 class CategoryController extends Controller
 {
@@ -86,7 +87,12 @@ class CategoryController extends Controller
     public function destroy(string $id)
     {
         $category = Category::findOrFail($id);
-        $category->delete();
+        $hasItem = PortfolioItem::where('category_id', $category->id)->count();
+        if($hasItem == 0){
+            $category->delete();
+            return true;
+        }
+
         return response(['status' => 'error']);
     }
 }
