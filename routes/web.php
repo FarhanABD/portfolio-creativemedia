@@ -1,6 +1,9 @@
 <?php
 
 use App\Http\Controllers\Admin\AboutController;
+use App\Http\Controllers\Admin\BlogCategoryController;
+use App\Http\Controllers\Admin\BlogController;
+use App\Http\Controllers\Admin\BlogSectionSettingController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\FeedbackController;
@@ -11,6 +14,7 @@ use App\Http\Controllers\Admin\PortfolioSectionSettingController;
 use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\TyperTitleController;
+use App\Http\Controllers\Admin\FeedbackSectionSettingController;
 use App\Http\Controllers\Frontend\HomeController;
 
 use Illuminate\Support\Facades\Route;
@@ -25,6 +29,8 @@ Route::get('/blog-details', function () {
 });
 
 Route::get('portfolio-details/{id}', [HomeController::class, 'showPortfolio'])->name('show.portfolio');
+Route::get('blog-details/{id}',[HomeController::class, 'showBlog'])->name('show.blog');
+Route::get('blogs',[HomeController::class, 'blog'])->name('blog');
 //===================== ENDS OF FRONTEND ROUTES ===========================//
 
 
@@ -52,12 +58,17 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], 
 
     //------ Portfolio Item Route -------//
     Route::resource('portfolio-item',PortfolioItemController::class);
-
-    //------ Portfolio Section Setting route ------//
     Route::resource('portfolio-section-setting',PortfolioSectionSettingController::class);
 
     //---------- Client Feedback Route ---------//
     Route::resource('feedback',FeedbackController::class);
+    Route::resource('feedback-section-setting', FeedbackSectionSettingController::class);
+
+    //----------- Blog Route -------------//
+    Route::resource('blog-category',BlogCategoryController::class);
+    Route::resource('blog',BlogController::class);
+    Route::resource('blog-section-setting',BlogSectionSettingController::class);
+
 });
 
 require __DIR__.'/auth.php';

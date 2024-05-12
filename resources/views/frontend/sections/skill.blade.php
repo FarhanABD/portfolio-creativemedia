@@ -52,7 +52,7 @@
             </div>
             <div class="col-lg-6 d-none d-lg-block">
                 <figure class="single-image text-right wow fadeInRight">
-                    <img src="{{asset('frontend/assets/images/pelatihan.jpg') }}" alt="" style="width: 600px; height: 400px;">
+                    <img src="{{asset('frontend/assets/images/pelatihan.jpg') }}" alt="" style="width: 500px; height: 350px;">
                 </figure>
             </div>
         </div>
