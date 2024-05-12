@@ -68,6 +68,15 @@
             <li><a class="nav-link" href="{{route('admin.portfolio-section-setting.index')}}">Section Settings</a></li>
           </ul>
         </li>
+
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i> <span>Feedback</span></a>
+          <ul class="dropdown-menu" style="display: none;">
+            {{-- <li><a class="nav-link" href="{{route('hero.index')}}">Hero Section</a></li> --}}
+            <li><a class="nav-link" href="{{route('admin.feedback.index')}}">Client Feedbacks</a></li>
+           
+          </ul>
+        </li>
       </ul>
   </aside>
 </div>

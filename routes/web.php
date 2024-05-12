@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\AboutController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\FeedbackController;
 use App\Http\Controllers\Admin\HeroController;
 use App\Http\Controllers\Admin\PortfolioItemController;
 use App\Http\Controllers\Admin\PortfolioSection;
@@ -54,6 +55,9 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], 
 
     //------ Portfolio Section Setting route ------//
     Route::resource('portfolio-section-setting',PortfolioSectionSettingController::class);
+
+    //---------- Client Feedback Route ---------//
+    Route::resource('feedback',FeedbackController::class);
 });
 
 require __DIR__.'/auth.php';
