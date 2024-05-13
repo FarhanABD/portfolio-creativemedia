@@ -11,7 +11,7 @@
             <div class="col-sm-4">
                 <div class="breadcrumbs">
                     <ul>
-                        <li><a href="#">Home</a></li>
+                        <li><a href="">Home</a></li>
                         <li>Portfolio</li>
                     </ul>
                 </div>

@@ -87,6 +87,9 @@
             <li><a class="nav-link" href="{{route('admin.blog-section-setting.index')}}">Section Setting</a></li>
           </ul>
         </li>
+
+        {{-- <li><a class="nav-link" href="{{route('admin.team.index')}}"><i class="far fa-square"></i> <span>Our Team</span></a></li> --}}
+
       </ul>
   </aside>
 </div>

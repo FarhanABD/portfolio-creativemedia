@@ -16,7 +16,7 @@ use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\TyperTitleController;
 use App\Http\Controllers\Admin\FeedbackSectionSettingController;
 use App\Http\Controllers\Frontend\HomeController;
-
+use App\Http\Controllers\Admin\TeamController;
 use Illuminate\Support\Facades\Route;
 
 //------------ FRONTEND ROUTES ----------------------------------------//
@@ -31,6 +31,7 @@ Route::get('/blog-details', function () {
 Route::get('portfolio-details/{id}', [HomeController::class, 'showPortfolio'])->name('show.portfolio');
 Route::get('blog-details/{id}',[HomeController::class, 'showBlog'])->name('show.blog');
 Route::get('blogs',[HomeController::class, 'blog'])->name('blog');
+Route::post('contact',[HomeController::class, 'contact'])->name('contact');
 //===================== ENDS OF FRONTEND ROUTES ===========================//
 
 
@@ -68,6 +69,9 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], 
     Route::resource('blog-category',BlogCategoryController::class);
     Route::resource('blog',BlogController::class);
     Route::resource('blog-section-setting',BlogSectionSettingController::class);
+
+    //--------- Our Team Route ------------//
+    Route::resource('team',TeamController::class);
 
 });
 
