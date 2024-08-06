@@ -3,7 +3,7 @@
 <section class="section">
     <div class="section-header">
       <div class="section-header-back">
-        <a href="features-post.html" class="btn btn-icon"><i class="fas fa-arrow-left"></i></a>
+        <a href="{{ route('admin.service.index') }}" class="btn btn-icon"><i class="fas fa-arrow-left"></i></a>
       </div>
       <h1>Services</h1>
     </div>

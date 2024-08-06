@@ -5,6 +5,7 @@
         <div class="section-header">
           <h1>Dashboard</h1>
         </div>
+
         <div class="row">
           <div class="col-lg-3 col-md-6 col-sm-6 col-12">
             <div class="card card-statistic-1">
@@ -16,7 +17,8 @@
                   <h4>Total Admin</h4>
                 </div>
                 <div class="card-body">
-                  10
+                  @csrf
+                  {{$totalAdmins}}
                 </div>
               </div>
             </div>
@@ -28,10 +30,10 @@
               </div>
               <div class="card-wrap">
                 <div class="card-header">
-                  <h4>News</h4>
+                  <h4>Portfolio Category</h4>
                 </div>
                 <div class="card-body">
-                  42
+                  {{ $totalCategory }}
                 </div>
               </div>
             </div>
@@ -43,10 +45,10 @@
               </div>
               <div class="card-wrap">
                 <div class="card-header">
-                  <h4>Reports</h4>
+                  <h4>Services</h4>
                 </div>
                 <div class="card-body">
-                  1,201
+                  {{ $totalService }}
                 </div>
               </div>
             </div>
@@ -58,14 +60,67 @@
               </div>
               <div class="card-wrap">
                 <div class="card-header">
-                  <h4>Online Users</h4>
+                  <h4>Blog Category</h4>
                 </div>
                 <div class="card-body">
-                  47
+                  {{ $blogCategory }}
                 </div>
               </div>
             </div>
           </div>
         </div>
+
+        <div class="horizontal-scroll">
+          <div class="card" style="width: 16rem;">
+            <img src="{{ asset('assets/img/avatar/avatar-1.png') }}" class="" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary mt-4">Go somewhere</a>
+            </div>
+          </div>
+  
+          <div class="card" style="width: 16rem;">
+            <img src="{{ asset('assets/img/avatar/avatar-1.png') }}" class="" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  
+              <a href="#" class="btn btn-primary mt-4">Go somewhere</a>
+            </div>
+          </div>
+  
+          <div class="card" style="width: 16rem;">
+            <img src="{{ asset('assets/img/avatar/avatar-1.png') }}" class="" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  
+              <a href="#" class="btn btn-primary mt-4">Go somewhere</a>
+            </div>
+          </div>
+
+          <div class="card" style="width: 16rem;">
+            <img src="{{ asset('assets/img/avatar/avatar-1.png') }}" class="" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  
+              <a href="#" class="btn btn-primary mt-4">Go somewhere</a>
+            </div>
+          </div>
+
+          <div class="card" style="width: 16rem;">
+            <img src="{{ asset('assets/img/avatar/avatar-1.png') }}" class="" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  
+              <a href="#" class="btn btn-primary mt-4">Go somewhere</a>
+            </div>
+          </div>          
+        </div>
+
+        
       </section>
 @endsection
